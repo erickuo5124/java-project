@@ -34,6 +34,7 @@
 |口罩![](https://vignette.wikia.nocookie.net/plantsvszombies/images/f/f8/2zfsax5_th.gif/revision/latest?cb=20110903004407)|100|0|50|0|牆壁，很硬|
 |額溫槍![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/freezepeashooter.gif?raw=true)|50|10|150|1|緩速為一半緩速5秒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/freezepea.png?raw=true)|
 |QRcode![](https://vignette.wikia.nocookie.net/plantsvszombies/images/4/4b/PvZ_Pictures.doc2.png/revision/latest?cb=20111123191552 =91x69)![](https://i.imgur.com/NlsGNiJ.png =180x148)|10|$\infty$|150|0|消掉三格距離內殭屍|
+
 :::info
 5秒 多10個知識之光
 子彈：一秒一格
@@ -43,7 +44,7 @@
 ### 病毒（殭屍）
 
 | Name | HP | ATK |speed| 
-| - | - | - | - | - | 
+| - | - | - | - |
 |中國武漢病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie1.png?raw=true)|40|10|4|
 |有蛋白質殼的病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie2.png?raw=true)|100|10|4|
 |會噴絲的瞬移病毒![](https://vignette.wikia.nocookie.net/plantsvszombies/images/2/21/PoleZombie2009HD.png/revision/latest?cb=20170905234524 =110x90)|50|10|原地等8秒直接瞬移到最前線|
