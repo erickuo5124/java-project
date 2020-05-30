@@ -1,7 +1,9 @@
 # 惠貞大戰中國武漢病毒
 ### 知識是光，善良是影
 
-https://hackmd.io/@kuouu/Java
+HackMD 連結：https://hackmd.io/@kuouu/Java
+
+GitHub 連結：https://github.com/erickuo5124/java-project
 
 ---
 
@@ -73,7 +75,7 @@ https://hackmd.io/@kuouu/Java
 ---
 
 :::warning
-可能會做，可能不會做
+可能會做，可能不會做 (八成是不會)
 :::
 
 ---
