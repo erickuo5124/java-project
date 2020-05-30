@@ -1,6 +1,8 @@
 # 惠貞大戰中國武漢病毒
 ### 知識是光，善良是影
 
+https://hackmd.io/@kuouu/Java
+
 ---
 
 ## 遊戲機制
@@ -47,7 +49,7 @@
 | - | - | - | - |
 |中國武漢病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie1.png?raw=true)|40|10|4|
 |有蛋白質殼的病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie2.png?raw=true)|100|10|4|
-|會噴絲的瞬移病毒![](https://vignette.wikia.nocookie.net/plantsvszombies/images/2/21/PoleZombie2009HD.png/revision/latest?cb=20170905234524 =110x90)|50|10|原地等8秒直接瞬移到最前線|
+|會噴絲的瞬移病毒 ![](https://vignette.wikia.nocookie.net/plantsvszombies/images/2/21/PoleZombie2009HD.png/revision/latest?cb=20170905234524 =110x90)|50|10|原地等8秒直接瞬移到最前線|
 
 :::info
 抓抓：一秒一下
