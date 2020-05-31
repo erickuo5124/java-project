@@ -3,15 +3,20 @@
 
 HackMD 連結：https://hackmd.io/@kuouu/Java
 
-GitHub 連結：https://github.com/erickuo5124/java-project
+GitHub 連結：https://github.com/erickuo5124/fight_covid19
+
 
 ---
 
 ## 遊戲機制
 各個物件有生命值和攻擊力
+
 生命值歸零就消失
+
 如果病毒走到城堡就遊戲結束
+
 殺病毒就加分
+
 沒有破關條件只最高
 
 ---
@@ -33,8 +38,8 @@ GitHub 連結：https://github.com/erickuo5124/java-project
 
 | Name | HP | ATK | Cost |speed| 說明 |
 | - | - | - | - | - | - |
-| 書本![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/sunflower.gif?raw=true) | 30 | 0 | 50 |0| 收集知識之光![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/sun.png?raw=true)(yield:30/6秒)|
-| 酒精瓶![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/peashooter.gif?raw=true) |50|10|100|1|射出一滴酒精![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/pea.png?raw=true)，最廢的那種|
+| Book(書本)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/sunflower.gif?raw=true) | 30 | 0 | 50 |0| 收集知識之光![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/sun.png?raw=true)(yield:30/6秒)|
+| Alcohol(酒精瓶)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/peashooter.gif?raw=true) |50|10|100|1|射出一滴酒精(Bullet)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/pea.png?raw=true)，最廢的那種|
 |口罩![](https://vignette.wikia.nocookie.net/plantsvszombies/images/f/f8/2zfsax5_th.gif/revision/latest?cb=20110903004407)|100|0|50|0|牆壁，很硬|
 |額溫槍![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/freezepeashooter.gif?raw=true)|50|10|150|1|緩速為一半緩速5秒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/freezepea.png?raw=true)|
 |QRcode![](https://vignette.wikia.nocookie.net/plantsvszombies/images/4/4b/PvZ_Pictures.doc2.png/revision/latest?cb=20111123191552 =91x69)![](https://i.imgur.com/NlsGNiJ.png =180x148)|10|$\infty$|150|0|消掉三格距離內殭屍|
