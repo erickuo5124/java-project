@@ -1,5 +1,4 @@
 package fight_covid19;
-import java.util.*;
 
 
 public class mask extends Plants{
@@ -14,14 +13,5 @@ public class mask extends Plants{
 		super.setY(y);
 		
 		Core.sun = Core.sun - super.getCost();//spend sun 
-		
-		Timer sunflowertimer = new Timer(); //Timer
-		TimerTask addsunflowr = new TimerTask(){
-				@Override
-				public void run() {
-					Core.sun = Core.sun + 30;
-				}
-		};
-		sunflowertimer.schedule(addsunflowr, 5000, 6000);//6 sec yeild 30 sunlight per sunflower 
 	}
 }
