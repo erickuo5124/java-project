@@ -9,7 +9,7 @@ public class mask extends Plants{
 		super.setATK(0);
 		super.setCost(50);
 		super.setATK_speed(0);
-		super.setname("B");
+		super.setname("M");
 		super.setX(x);
 		super.setY(y);
 		
