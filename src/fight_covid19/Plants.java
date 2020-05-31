@@ -5,6 +5,7 @@ public class Plants extends D_object{
 	private int ATK = 0;
 	private int Cost = 0;
 	private int ATK_speed = 0;
+		
 	
 	public int getHP() {
 		return HP;
@@ -33,5 +34,5 @@ public class Plants extends D_object{
 	public void setATK_speed(int ATK_speed) {
 		this.ATK_speed = ATK_speed;
 	}
-	
+	public void dead() {}//implement in each plants for stopping different timer
 }

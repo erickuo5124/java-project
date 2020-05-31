@@ -2,10 +2,10 @@ package fight_covid19;
 import java.util.*;
 
 
-public class Book extends Plants{
-	private Timer sunflowertimer = new Timer(); //Timer
-	public Book(int y,int x){
-		super.setHP(30);
+public class mask extends Plants{
+	
+	public mask(int y,int x){
+		super.setHP(100);
 		super.setATK(0);
 		super.setCost(50);
 		super.setATK_speed(0);
@@ -15,7 +15,7 @@ public class Book extends Plants{
 		
 		Core.sun = Core.sun - super.getCost();//spend sun 
 		
-		
+		Timer sunflowertimer = new Timer(); //Timer
 		TimerTask addsunflowr = new TimerTask(){
 				@Override
 				public void run() {
@@ -23,12 +23,5 @@ public class Book extends Plants{
 				}
 		};
 		sunflowertimer.schedule(addsunflowr, 5000, 6000);//6 sec yeild 30 sunlight per sunflower 
-	}
-	
-	public void dead() {
-		if(!super.getname().equals("E") && this.getHP() <= 0) {
-			Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
-			sunflowertimer.cancel();
-		}
 	}
 }

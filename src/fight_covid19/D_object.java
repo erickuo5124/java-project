@@ -27,5 +27,4 @@ public class D_object {
 		this.Y = Y;
 	}
 	
-	
 }

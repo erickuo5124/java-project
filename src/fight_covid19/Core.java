@@ -37,18 +37,28 @@ public class Core {
 		        bullet.get(i).add(j, new EmptyB(i,j));
 		    }
 	    }
+		//test zone
+		plant.get(0).set(2, new Alcohol(0,2));//test shooter
+		plant.get(1).set(2, new Alcohol(1,2));//test shooter
+		plant.get(2).set(2, new Alcohol(2,2));//test shooter
+		plant.get(0).set(3, new Alcohol(0,2));//test shooter
+		plant.get(1).set(3, new Alcohol(1,2));//test shooter
+		plant.get(2).set(3, new Alcohol(2,2));//test shooter
+		plant.get(0).set(4, new Alcohol(0,2));//test shooter
+		plant.get(1).set(4, new Alcohol(1,2));//test shooter
+		plant.get(2).set(4, new Alcohol(2,2));//test shooter
 		
-		plant.get(1).add(0, new Book(1,0));
+		//testzone end
 		checkboardP(plant);
 		checkboardV(virus);
 		checkboardB(bullet);
 		
-		//basic sun get 5 every 5 sec
+		//basic sun get 10 every 5 sec
 		Timer suntimer = new Timer(); //Timer
 		TimerTask addsun = new TimerTask(){
 				@Override
 				public void run() {
-					sun = sun + 5;
+					sun = sun + 10;
 				}	
 		};
 		suntimer.schedule(addsun, 0, 5000);
@@ -60,11 +70,30 @@ public class Core {
 			public void run() {
 				Random rnd = new Random();
 				int y = rnd.nextInt(3);
-				virus.get(y).set(9, new Normal_virus(y,9));
+				int viruskind = rnd.nextInt(10);
+				if(viruskind > 2 ) {
+					virus.get(y).set(9, new Normal_virus(y,9));
+				}
+				else { //chance of spawn strong virus is 0.3
+					virus.get(y).set(9, new Strong_virus(y,9));
+				}
 			}	
 		};
 		virustimer.schedule(spawnvirus, 0, 5000);
-										
+		
+		//moniter state 
+		Timer detectiontimer = new Timer(); //Timer
+		TimerTask moniterstate = new TimerTask(){
+			@Override
+			public void run() {
+				checklose();//check if virus reach end
+				virus_attack();//virus attack speed is atk/1sec
+				System.gc();//free memory
+			}	
+		};
+		detectiontimer.schedule(moniterstate, 0, 1000);
+		
+		
 		//repaint the board every 1 sec 
 		Timer repainttimer = new Timer(); //Timer
 		TimerTask repaint = new TimerTask(){
@@ -79,11 +108,13 @@ public class Core {
 				checkboardB(bullet);
 				System.out.println("sunlight");
 				System.out.println(sun);
+				System.out.println("score");
+				System.out.println(score);
 			}	
 		};
 		repainttimer.schedule(repaint, 0, 1000);
 	
-	}
+	}//end of main
 	
 	public static void checkboardP(ArrayList<ArrayList<Plants>> board) {
 		for(int i = 0; i < 3; i++)  {
@@ -117,4 +148,27 @@ public class Core {
 	    }
 		System.out.println(" ");
 	}
+	
+	public static void checklose() {
+		for(int i = 0;i < 3;i++) {
+			if(!virus.get(i).get(0).getname().equals("E")) {
+				System.out.println("you lose");
+				System.exit(0);
+			}
+		}
+	}
+	
+	public static void virus_attack(){
+		for(int i = 0; i < 3; i++)  {
+			for(int j = 0; j < 10; j++)  {
+				if(!virus.get(i).get(j).getname().equals("E")) {
+					if(!plant.get(i).get(j - 1).getname().equals("E")) {
+						Virus currentvirus = virus.get(i).get(j);
+						currentvirus.attack();
+					}
+				}
+		    }
+	    }
+	}
+	
 }
