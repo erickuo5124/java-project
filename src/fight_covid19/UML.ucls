@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="fight_covid19.Core" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Core.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="263" x="114" y="145"/>    
+    <position height="-1" width="-1" x="182" y="423"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="fight_covid19.D_object" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/D_object.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="126" x="788" y="145"/>    
+    <position height="-1" width="-1" x="854" y="300"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="fight_covid19.UI" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/UI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="455" y="145"/>    
+    <position height="-1" width="-1" x="409" y="321"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="fight_covid19.S_object" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/S_object.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="621" y="145"/>    
+    <position height="-1" width="-1" x="559" y="303"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
