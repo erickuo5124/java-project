@@ -1,4 +1,4 @@
-# 惠貞大戰中國武漢病毒
+# 慧貞大戰中國武漢病毒
 ### 知識是光，善良是影
 
 HackMD 連結：https://hackmd.io/@kuouu/Java
@@ -23,8 +23,12 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 
 ## UI
 場地：3*10
-![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/mainBG.png?raw=true)
-![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/cards/card_cherrybomb.png?raw=true)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/cards/card_freezepeashooter.png?raw=true)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/cards/card_peashooter.png?raw=true)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/cards/card_sunflower.png?raw=true)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/cards/card_wallnut.png?raw=true)
+
+![](https://i.imgur.com/H9FEpo6.jpg)
+![](https://i.imgur.com/ymmQIl8.jpg)
+![](https://i.imgur.com/XNu4fUB.jpg)
+![](https://i.imgur.com/NnqzLSD.jpg)
+
 
 ---
 
@@ -38,9 +42,9 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 
 | Name | HP | ATK | Cost |speed| 說明 |
 | - | - | - | - | - | - |
-| Book(書本)![](https://media.tenor.com/images/8ef57505dca09c4c4df3766faa3f5aca/tenor.gif =125x) | 30 | 0 | 50 |0| 收集知識之光![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/sun.png?raw=true)(yield:30/6秒)|
-| Alcohol(酒精瓶)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/peashooter.gif?raw=true) |50|10|100|1|射出一滴酒精(Bullet)![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/pea.png?raw=true)，最廢的那種|
-|口罩![](https://vignette.wikia.nocookie.net/plantsvszombies/images/f/f8/2zfsax5_th.gif/revision/latest?cb=20110903004407)|100|0|50|0|牆壁，很硬|
+| Book(書本)![](https://i.imgur.com/wxOQNri.gif)| 30 | 0 | 50 |0| 收集知識之光![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/sun.png?raw=true)(yield:30/6秒)|
+| Alcohol(酒精瓶)![](https://i.imgur.com/apmPAp3.gif)|50|10|100|1|射出一滴酒精(Bullet)![](https://i.imgur.com/YLtkTos.png)，最廢的那種|
+|mask(口罩)![](https://i.imgur.com/yl2pK8Z.gif)|100|0|50|0|牆壁，很硬|
 |額溫槍![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/plants/freezepeashooter.gif?raw=true)|50|10|150|1|緩速為一半緩速5秒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/freezepea.png?raw=true)|
 |QRcode![](https://i.imgur.com/KKcUKc4.png)![](https://i.imgur.com/c6ybIKH.png)|10|$\infty$|150|0|消掉三格距離內殭屍|
 
@@ -54,10 +58,9 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 
 | Name | HP | ATK |speed| 
 | - | - | - | - |
-|中國武漢病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie1.png?raw=true)|40|10|4|
-|有蛋白質殼的病毒![](https://github.com/arminkz/PlantsVsZombies/blob/master/src/images/zombies/zombie2.png?raw=true)|100|10|4|
-|會噴絲的瞬移病毒 ![](https://i.imgur.com/aiznaTT.png)
-|50|10|原地等8秒直接瞬移到最前線|
+|Normal_virus![](https://i.imgur.com/o0Sw5V8.gif)|40|10|4|
+|Strong_virus![](https://i.imgur.com/0kll6yh.gif)|100|10|4|
+|會噴絲的瞬移病毒 ![](https://i.imgur.com/aiznaTT.png)|50|10|原地等8秒直接瞬移到最前線|
 
 抓抓：一秒一下
 
@@ -65,11 +68,6 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 ---
 
 ## 程式架構
-
-|funcName|return|parameter|內容|
-|-|-|-|-|
-|example|(int)location|(virus)virus|取得輸入virus的座標|
-
 
 ### 構想
 ![](https://i.imgur.com/akKLBkG.png)
