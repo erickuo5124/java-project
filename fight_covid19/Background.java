@@ -33,23 +33,24 @@ public class Background extends JPanel implements MouseListener{
         int y = (e.getX() - 60) / 100;
         int x = (e.getY() - 250) / 110;
 
-        if (State.currentOption.equals(State.PlantType.None) || (x > 2 && x < 0) || (y > 9 && y < 9)) {
+        // when nothing is picked or x and y is out of region
+        if (State.currentOption.equals(State.PlantType.None) || (x > 2 || x < 0) || (y > 9 || y < 9)) {
             return;
         }
 
-        // when peashooter is picked
+        // when peashooter is picked, put it on the panel
         if (State.currentOption.equals(State.PlantType.Peashooter)) {
             Core.plant.get(x).set(y, new Alcohol(x, y));
             State.setCurrentOption(State.PlantType.None);
         }
 
-        // when wallnut is picked
+        // when wallnut is picked, put it on the panel
         if (State.currentOption.equals(State.PlantType.WallNut)) {
             Core.plant.get(x).set(y, new mask(x, y));
             State.setCurrentOption(State.PlantType.None);
         }
 
-        // when sunflower is picked
+        // when sunflower is picked, put it on the panel
         if (State.currentOption.equals(State.PlantType.Sunflower)) {
             Core.plant.get(x).set(y, new Book(x, y));
             State.setCurrentOption(State.PlantType.None);

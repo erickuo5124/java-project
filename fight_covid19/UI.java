@@ -21,19 +21,19 @@ public class UI extends JFrame implements MouseMotionListener{
 
         // S_object is called from Core.java
 
-        // add sunflower
+        // add sunflower card on the topleft mainscreen
         Card sunflower = new Card(new ImageIcon(this.getClass().getResource("images/cards/card_sunflower.png")).getImage());
         sunflower.setLocation(110, 8);
         sunflower.setID("sunflower");
         getLayeredPane().add(sunflower, 0);
 
-        // add wallnut
+        // add wallnut card on the topleft mainscreen
         Card wallnut = new Card(new ImageIcon(this.getClass().getResource("images/cards/card_wallnut.png")).getImage());
         wallnut.setLocation(175, 8);
         wallnut.setID("wallnut");
         getLayeredPane().add(wallnut, 0);
 
-        // add peashooter
+        // add peashooter card on the topleft mainscreen
         Card peashooter = new Card(new ImageIcon(this.getClass().getResource("images/cards/card_peashooter.png")).getImage());
         peashooter.setLocation(240, 8);
         peashooter.setID("peashooter");
@@ -54,6 +54,7 @@ public class UI extends JFrame implements MouseMotionListener{
 
     }
 
+    // haven't finished yet, it't useless now
     @Override
     public void mouseMoved(MouseEvent e) {
         if (State.currentOption.equals(State.PlantType.Peashooter) ||

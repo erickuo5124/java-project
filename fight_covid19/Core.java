@@ -113,6 +113,7 @@ public class Core {
 				s_object = new S_object();
 				s_object.setLocation(0, 0);
 				ui.getLayeredPane().add(s_object, 0);
+				// ---------------------------------
 
 				// test
 				System.out.println("plant");
