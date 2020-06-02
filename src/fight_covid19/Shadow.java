@@ -2,8 +2,6 @@ package fight_covid19;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 /**
  * When you click an item, it guides u to where u can put
@@ -46,7 +44,6 @@ public class Shadow extends JPanel {
                                         String description) {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
-            System.out.println(imgURL);
             return new ImageIcon(imgURL, description);
         } else {
             System.err.println("Couldn't find file: " + path);

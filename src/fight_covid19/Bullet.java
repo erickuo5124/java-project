@@ -1,7 +1,6 @@
 package fight_covid19;
 
 public class Bullet extends D_object{
-	
 	private int HP = 0;
 	private int ATK = 0;
 	private int Move_speed = 0;
@@ -29,13 +28,11 @@ public class Bullet extends D_object{
 	}
 	
 	public void attack() {
-		if(!Core.virus.get(this.getY()).get(this.getX()).getname().equals("E")) {
-			Virus currentvirus = Core.virus.get(this.getY()).get(this.getX());
-			currentvirus.setHP(currentvirus.getHP() - this.getATK());
-			currentvirus.dead();
-			this.dead();//hit and clear bullet
+		int y = getY();
+		Virus v = Core.virus.get(y).get(0);
+		v.setHP(v.getHP() - this.getATK());
+		if(v.getHP() <= 0) {
+			v.dead();
 		}
 	}
-	
-	public void dead() {}
 }

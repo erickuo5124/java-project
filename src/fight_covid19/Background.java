@@ -12,23 +12,28 @@ public class Background extends JPanel implements MouseListener{
     /**
      * Creates new form Menu
      */
-    private Image bgImage;
+    private Image bg;
 
-    public Background() {
+    public Background(int num) {
         setSize(1012, 785);
         setLayout(null);
-        bgImage = createImageIcon("images/ui/mainBG.png", "main").getImage();
+        Image[] bgImage = new Image[3];
+        bgImage[0] = createImageIcon("images/ui/startBG.jpg","main").getImage();
+        bgImage[1] = createImageIcon("images/ui/mainBG.png", "main").getImage();
+        //bgImage[2] = createImageIcon("images/ui/endBG.png", "main").getImage();
+        bg = bgImage[num];
         addMouseListener(this);
     }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(bgImage, 0, 0, null);
+        g.drawImage(bg, 0, 0, null);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+    	System.out.println(e.getX() +" " + e.getY());
         int y = (e.getX() - 60) / 100;
         int x = (e.getY() - 250) / 110;
 
@@ -63,7 +68,6 @@ public class Background extends JPanel implements MouseListener{
                                         String description) {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
-            System.out.println(imgURL);
             return new ImageIcon(imgURL, description);
         } else {
             System.err.println("Couldn't find file: " + path);

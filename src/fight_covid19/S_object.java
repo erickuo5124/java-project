@@ -2,8 +2,8 @@ package fight_covid19;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class S_object extends JPanel {
     private Image bookImage;
@@ -50,72 +50,49 @@ public class S_object extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // decide peashooter(sanitizer)
+        // plant
         for(int i = 0; i < 3; i++)  {
             for(int j = 0; j < 10; j++)  {
-                if (Core.plant.get(i).get(j).getname().equals("A")) {
-                    g.drawImage(alcoholImage, j * 105 + 55, i * 110 + 220, null);
+                switch(Core.plant.get(i).get(j).getname()) {
+                	case"A": g.drawImage(alcoholImage, j * 105 + 55, i * 110 + 230, null); break;
+                	case"M": g.drawImage(maskImage, j * 100 + 50, i * 110 + 255, null); break;
+                	case"B": g.drawImage(bookImage, j * 100 + 50, i * 115 + 225, null); break;
                 }
             }
         }
-
-        // decide wallnut(face mask)
-        for(int i = 0; i < 3; i++)  {
-            for(int j = 0; j < 10; j++)  {
-                if (Core.plant.get(i).get(j).getname().equals("M")) {
-                    g.drawImage(maskImage, j * 100 + 50, i * 110 + 255, null);
-                }
-            }
+                
+        // virus
+        for(ArrayList<Virus> row : Core.virus) {
+        	for(Virus v : row) {
+        		if(v instanceof Normal_virus) g.drawImage(normalVirusImage, v.locationX, v.getY() * 110 + 240, null);
+        		else if(v instanceof Strong_virus) g.drawImage(strongVirusImage, v.locationX, v.getY() * 110 + 240, null);
+        	}
         }
 
-        // decide sunflower(book)
-        for(int i = 0; i < 3; i++)  {
-            for(int j = 0; j < 10; j++)  {
-                if (Core.plant.get(i).get(j).getname().equals("B")) {
-                    g.drawImage(bookImage, j * 100 + 50, i * 115 + 225, null);
-                }
+        // bullet
+        for(ArrayList<Bullet> row : Core.bullet) {
+        	Iterator<Bullet> it = row.iterator();
+            while (it.hasNext()) {
+                Bullet b = it.next();
+                
+                if(b instanceof Normal_bullet) g.drawImage(bulletImage, b.locationX+10, b.getY() * 120 + 250, null);
+        		int y = b.getY();
+        		int nextX = b.locationX+24;
+        		if(!Core.virus.get(y).isEmpty()) {
+        			Virus v = Core.virus.get(y).get(0);
+        			if(v.locationX < nextX) {
+        				b.attack();
+        				it.remove();
+        			}
+        			else if(v.locationX > 1000) it.remove();
+        		}
+        		b.locationX = nextX;
             }
+        	
         }
-
-        // decide zombie1(virus)
-        for(int i = 0; i < 3; i++)  {
-            for(int j = 0; j < 10; j++)  {
-                if (Core.virus.get(i).get(j).getname().equals("N")) {
-                    g.drawImage(normalVirusImage, j * 100 + 50, i * 110 + 240, null);
-                }
-            }
-        }
-
-        // decide zombie2(virus with shell)
-        for(int i = 0; i < 3; i++)  {
-            for(int j = 0; j < 10; j++)  {
-                if (Core.virus.get(i).get(j).getname().equals("S")) {
-                    g.drawImage(strongVirusImage, j * 100 + 50, i * 115 + 230, null);
-                }
-            }
-        }
-
-        // decide pea(alcohol)
-        for(int i = 0; i < 3; i++)  {
-            for(int j = 0; j < 10; j++)  {
-                if (Core.bullet.get(i).get(j).getname().equals("N")) {
-                    g.drawImage(bulletImage, j * 100 + 60, i * 120 + 250, null);
-                }
-            }
-        }
-    }
-
-    // clear the old one
-    public void refresh() {
-        bookImage = null;
-        maskImage = null;
-        alcoholImage = null;
-        normalVirusImage = null;
-        strongVirusImage = null;
-        bulletImage = null;
-        scoreBoard.setText("");
-        sunLight.setText("");
-        return;
+        
+        scoreBoard.setText("Score : " + Core.score);
+        sunLight.setText("Power : " + Core.sun);
     }
 
     //------------helper------------
@@ -124,7 +101,6 @@ public class S_object extends JPanel {
                                         String description) {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
-            System.out.println(imgURL);
             return new ImageIcon(imgURL, description);
         } else {
             System.err.println("Couldn't find file: " + path);

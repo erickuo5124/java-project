@@ -18,19 +18,15 @@ public class Alcohol extends Plants{
 		TimerTask doATK = new TimerTask(){
 			@Override
 			public void run() {
-				spawnbullet();
+				if(!Core.virus.get(getY()).isEmpty())
+					spawnbullet();
 			}	
 		};
-		ATKtimer.schedule(doATK, 0, 1000);//do every one sec
+		ATKtimer.schedule(doATK, 500, 1000);//do every one sec
 	}
 	
 	public void spawnbullet() {
-		if(Core.bullet.get(this.getY()).get(this.getX()).getname().equals("E")) {//clean can spawn bullet
-			Core.bullet.get(this.getY()).set(this.getX(),new Normal_bullet(this.getY(),this.getX()));
-		}
-		else {//exsit bullet already so add atk
-			Core.bullet.get(this.getY()).get(this.getX()).setATK(this.getATK() + Core.bullet.get(this.getY()).get(this.getX()).getATK());
-		}
+		Core.bullet.get(this.getY()).add(new Normal_bullet(this.getY(),this.getX()));
 	}
 	
 	public void dead() {

@@ -1,31 +1,42 @@
 package fight_covid19;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
-import javax.swing.event.*;
 
 public class UI extends JFrame {
-
+	Background bg;
     public UI() {
         setSize(1012, 785);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(null);
         setResizable(false);
         setVisible(true);
-
+    }
+    
+    public void menuUI() {
+    	// add Background
+        bg = new Background(0);
+        bg.setLocation(0, 0);
+        getLayeredPane().add(bg, -1);
+        
+        Btn btn = new Btn("enter");
+		btn.setLocation(724, 385);
+        getLayeredPane().add(btn, 0);
+    }
+    
+    public void gameUI() {
+    	bg = new Background(1);
+    	bg.setLocation(0, 0);
+        getLayeredPane().add(bg, -1);
+        
         Shadow s = new Shadow();
         s.setLocation(500, 10);
         getLayeredPane().add(s, 0);
-
-        // add Background
-        Background bg = new Background();
-        bg.setLocation(0, 0);
-        getLayeredPane().add(bg, -1);
-
-        // S_object is called from Core.java
-
-        // add sunflower card on the topleft mainscreen
+        
+    	// add sunflower card on the topleft mainscreen
         Card sunflower = new Card(createImageIcon("images/cards/card_book.jpg", "book").getImage());
         sunflower.setLocation(110, 8);
         sunflower.setID("book");
@@ -42,16 +53,6 @@ public class UI extends JFrame {
         peashooter.setLocation(240, 8);
         peashooter.setID("alcohol");
         getLayeredPane().add(peashooter, 0);
-
-    }
-
-    public UI(boolean b) {
-        setSize(1012, 785);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setResizable(false);
-        setVisible(true);
-        Menu menu = new Menu();
-        getLayeredPane().add(menu, 0);
     }
 
     //------------helper------------
@@ -60,11 +61,24 @@ public class UI extends JFrame {
                                         String description) {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
-            System.out.println(imgURL);
             return new ImageIcon(imgURL, description);
         } else {
             System.err.println("Couldn't find file: " + path);
             return null;
         }
     }
+}
+
+class Btn extends JPanel{
+	public JButton btn;
+	public Btn(String s) {
+		btn = new JButton(s);
+		btn.setBackground(Color.RED);
+		btn.addActionListener(new ActionListener(){ 
+			public void actionPerformed(ActionEvent e) 
+			{ 
+				JOptionPane.showMessageDialog(null,"11111111"); //呼叫msgbox
+			} 
+		}); 
+	}
 }

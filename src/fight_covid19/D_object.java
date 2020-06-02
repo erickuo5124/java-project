@@ -4,7 +4,7 @@ public class D_object {
 	private String name = "";
 	private int X = 100;
 	private int Y = 100;
-
+	public int locationX;
 
 	public String getname() {
 		return name;
@@ -25,6 +25,10 @@ public class D_object {
 	}
 	public void setY(int Y) {
 		this.Y = Y;
+	}
+	
+	public void setLocation(int x) {
+		this.locationX = x;
 	}
 	
 }

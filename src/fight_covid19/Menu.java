@@ -11,8 +11,8 @@ public class Menu extends JPanel{
     private Image menu;
 
     public Menu() {
-        setSize(1200, 785);
-        menu = createImageIcon("images/ui/startUI.jpg", "menu").getImage();
+    	setSize(1012, 785);
+        menu = createImageIcon("images/ui/startBG.jpg", "menu").getImage();
         JButton button = new JButton();
         button.addActionListener( new ActionListener() {
 
@@ -36,7 +36,6 @@ public class Menu extends JPanel{
                                         String description) {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
-            System.out.println(imgURL);
             return new ImageIcon(imgURL, description);
         } else {
             System.err.println("Couldn't find file: " + path);

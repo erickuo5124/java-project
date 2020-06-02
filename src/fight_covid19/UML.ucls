@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="fight_covid19.Book" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Book.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="131" x="560" y="819"/>    
+    <position height="-1" width="-1" x="959" y="757"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="fight_covid19.EmptyV" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/EmptyV.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="101" x="77" y="819"/>    
+    <position height="-1" width="-1" x="272" y="523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="fight_covid19.Virus" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Virus.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="145" x="368" y="464"/>    
+    <position height="-1" width="-1" x="468" y="460"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="fight_covid19.Alcohol" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Alcohol.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="116" x="731" y="819"/>    
+    <position height="-1" width="-1" x="626" y="741"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="fight_covid19.EmptyP" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/EmptyP.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="101" x="887" y="819"/>    
+    <position height="-1" width="-1" x="635" y="423"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,150 +48,216 @@
   </class>  
   <class id="6" language="java" name="fight_covid19.Core" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Core.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="263" x="114" y="145"/>    
+    <position height="-1" width="-1" x="257" y="315"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="fight_covid19.mask" project="fight_covid19" 
-    file="/fight_covid19/src/fight_covid19/mask.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="1028" y="819"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="fight_covid19.Normal_virus" project="fight_covid19" 
+  <class id="7" language="java" name="fight_covid19.Normal_virus" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Normal_virus.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="131" x="218" y="819"/>    
+    <position height="-1" width="-1" x="286" y="790"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="fight_covid19.D_object" project="fight_covid19" 
+  <class id="8" language="java" name="fight_covid19.D_object" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/D_object.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="126" x="788" y="145"/>    
+    <position height="-1" width="-1" x="807" y="139"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="fight_covid19.EmptyB" project="fight_covid19" 
+  <class id="9" language="java" name="fight_covid19.EmptyB" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/EmptyB.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="101" x="1155" y="819"/>    
+    <position height="-1" width="-1" x="982" y="494"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="fight_covid19.UI" project="fight_covid19" 
+  <class id="10" language="java" name="fight_covid19.UI" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/UI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="455" y="145"/>    
+    <position height="-1" width="-1" x="451" y="93"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="fight_covid19.Plants" project="fight_covid19" 
+  <class id="11" language="java" name="fight_covid19.Plants" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Plants.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="139" x="788" y="464"/>    
+    <position height="-1" width="-1" x="815" y="517"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="fight_covid19.S_object" project="fight_covid19" 
+  <class id="12" language="java" name="fight_covid19.S_object" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/S_object.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="87" x="621" y="145"/>    
+    <position height="-1" width="-1" x="1103" y="155"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="fight_covid19.Strong_virus" project="fight_covid19" 
+  <class id="13" language="java" name="fight_covid19.Strong_virus" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Strong_virus.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="131" x="389" y="819"/>    
+    <position height="-1" width="-1" x="445" y="793"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="fight_covid19.Bullet" project="fight_covid19" 
+  <class id="14" language="java" name="fight_covid19.Bullet" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Bullet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="145" x="1155" y="464"/>    
+    <position height="-1" width="-1" x="1152" y="507"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="fight_covid19.Normal_bullet" project="fight_covid19" 
+  <class id="15" language="java" name="fight_covid19.Normal_bullet" project="fight_covid19" 
     file="/fight_covid19/src/fight_covid19/Normal_bullet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="123" x="1296" y="819"/>    
+    <position height="-1" width="-1" x="1171" y="758"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <generalization id="18">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <generalization id="20">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="21">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="22">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
+  <class id="16" language="java" name="fight_covid19.Menu" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/Menu.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1407" y="367"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="fight_covid19.Shadow" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/Shadow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1415" y="130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="fight_covid19.Background" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/Background.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1727" y="514"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="fight_covid19.State" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/State.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1428" y="763"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="fight_covid19.Card" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/Card.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1689" y="197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="fight_covid19.Mask" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/Mask.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="810" y="761"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="22" language="java" name="fight_covid19.State.PlantType" project="fight_covid19" 
+    file="/fight_covid19/src/fight_covid19/State.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1403" y="544"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
   <generalization id="23">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="15"/>  
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
   </generalization>  
   <generalization id="24">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <nesting id="25">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="22"/>  
+  </nesting>  
+  <generalization id="26">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </generalization>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="12"/>  
-  </generalization>  
-  <generalization id="26">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
   <generalization id="27">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="9"/>  
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="3"/>  
   </generalization>  
   <generalization id="28">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="15"/>  
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="31">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="32">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="33" name="currentOption"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

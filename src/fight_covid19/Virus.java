@@ -1,6 +1,9 @@
 package fight_covid19;
 
+import java.util.Timer;
+
 public class Virus extends D_object{
+	protected Timer virusmovetimer = new Timer(); //Timer
 	private int HP = 0;
 	private int ATK = 0;
 	private int Move_speed = 0;
@@ -27,12 +30,32 @@ public class Virus extends D_object{
 		this.Move_speed = Move_speed;
 	}
 	
-	public void attack() {
-		Plants plant_in_the_front = Core.plant.get(this.getY()).get(this.getX() - 1);
+	public void attack(int x) {
+		Plants plant_in_the_front = Core.plant.get(this.getY()).get(x);
 		plant_in_the_front.setHP(plant_in_the_front.getHP() - this.getATK());
 		plant_in_the_front.dead();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
-	public void dead() {}//implement in each plants for stopping different timer
+	public void dead() {
+		virusmovetimer.cancel();
+		Core.score = Core.score + 10;
+		Core.virus.get(getY()).remove(0);
+		System.gc();
+	}
+	
+	public void moveforward() {
+		int y = getY();
+		int nextX = locationX-2;
+		if(Core.plant.get(y).get(nextX/100).getname().equals("E"))
+			locationX = nextX;
+		else
+			this.attack(nextX/100);
+		
+	}
 		
 }
