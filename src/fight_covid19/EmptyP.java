@@ -1,4 +1,6 @@
 package fight_covid19;
+import java.util.*;
+
 
 public class EmptyP extends Plants{
 	public EmptyP(int y,int x){
@@ -9,5 +11,6 @@ public class EmptyP extends Plants{
 		super.setname("E");
 		super.setX(x);
 		super.setY(y);
+
 	}
 }

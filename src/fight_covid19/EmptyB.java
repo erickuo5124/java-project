@@ -1,4 +1,6 @@
 package fight_covid19;
+import java.util.*;
+
 
 public class EmptyB extends Bullet{
 	public EmptyB(int y,int x){
@@ -8,5 +10,6 @@ public class EmptyB extends Bullet{
 		super.setname("E");
 		super.setX(x);
 		super.setY(y);
+
 	}
 }

@@ -1,4 +1,6 @@
 package fight_covid19;
+import java.util.*;
+
 
 public class EmptyV extends Virus{
 	public EmptyV(int y,int x){
@@ -8,5 +10,6 @@ public class EmptyV extends Virus{
 		super.setname("E");
 		super.setX(x);
 		super.setY(y);
+
 	}
 }

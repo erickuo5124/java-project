@@ -33,6 +33,7 @@ public class Strong_virus extends Virus{
 				in_the_front.setHP(this.getHP() + in_the_front.getHP());
 				//System.out.println(in_the_front.getATK());
 				//System.out.println(in_the_front.getHP());
+				
 			}
 			else {
 				Core.virus.get(y).set(x,new EmptyV(y,x));
