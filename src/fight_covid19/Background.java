@@ -45,7 +45,7 @@ public class Background extends JPanel implements MouseListener{
 
         // when wallnut is picked, put it on the panel
         if (State.currentOption.equals(State.PlantType.MASK)) {
-            Core.plant.get(x).set(y, new mask(x, y));
+            Core.plant.get(x).set(y, new Mask(x, y));
             State.setCurrentOption(State.PlantType.None);
         }
 
