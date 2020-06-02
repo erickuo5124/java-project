@@ -14,4 +14,10 @@ public class mask extends Plants{
 		
 		Core.sun = Core.sun - super.getCost();//spend sun 
 	}
+	
+	public void dead() {
+		if(!super.getname().equals("E") && this.getHP() <= 0) {
+			Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
+		}
+	}
 }
