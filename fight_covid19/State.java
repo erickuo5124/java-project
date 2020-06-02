@@ -6,9 +6,9 @@ public class State {
 
     enum PlantType {
         None,
-        Sunflower,
-        Peashooter,
-        WallNut,
+        BOOK,
+        ALCOHOL,
+        MASK,
     }
 
     public static void setCurrentOption(PlantType curr) {

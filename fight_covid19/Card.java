@@ -31,41 +31,31 @@ public class Card extends JPanel implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         // when sunflower is clicked
-        if (id.equals("sunflower")) {
+        if (id.equals("book")) {
             if (Core.sun >= 50) {
-                State.setCurrentOption(State.PlantType.Sunflower);
+                State.setCurrentOption(State.PlantType.BOOK);
             } else {
                 return;
             }
         }
 
         // when wallnut is clicked
-        if (id.equals("wallnut")) {
+        if (id.equals("mask")) {
             if (Core.sun >= 50) {
-                State.setCurrentOption(State.PlantType.WallNut);
+                State.setCurrentOption(State.PlantType.MASK);
             } else {
                 return;
             }
         }
 
         // when peashooter is clicked
-        if (id.equals("peashooter")) {
+        if (id.equals("alcohol")) {
             if (Core.sun >= 100) {
-                State.setCurrentOption(State.PlantType.Peashooter);
+                State.setCurrentOption(State.PlantType.ALCOHOL);
             } else {
                 return;
             }
         }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-
     }
 
     @Override
@@ -76,5 +66,19 @@ public class Card extends JPanel implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
         setSize(64, 90);
+    }
+
+
+
+
+    //---------------useless-----------------
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
     }
 }

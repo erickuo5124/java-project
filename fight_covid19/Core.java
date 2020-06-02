@@ -11,11 +11,7 @@ public class Core {
 		
 	public static void main(String[] args) {
 
-		// in care we want to build a menu
-		ui = new UI(true);
-
-		// since there is no menu so just start the game
-		begin();
+		ui = new UI();
 
 		//initialize three board
 		for(int i = 0; i < 3; i++)  {
@@ -27,7 +23,7 @@ public class Core {
 		for(int i = 0; i < 3; i++)  {
 	        bullet.add(new ArrayList<Bullet>(10));
 	    }
-		
+
 		for(int i = 0; i < 3; i++)  {
 			for(int j = 0; j < 10; j++)  {
 		        plant.get(i).add(j, new EmptyP(i,j));
@@ -53,22 +49,22 @@ public class Core {
 		plant.get(0).set(4, new Alcohol(0,2));//test shooter
 		plant.get(1).set(4, new Alcohol(1,2));//test shooter
 		plant.get(2).set(4, new Alcohol(2,2));//test shooter*/
-		
+
 		//testzone end
 		checkboardP(plant);
 		checkboardV(virus);
 		checkboardB(bullet);
-		
+
 		//basic sun get 10 every 5 sec
 		Timer suntimer = new Timer(); //Timer
 		TimerTask addsun = new TimerTask(){
 				@Override
 				public void run() {
 					sun = sun + 10;
-				}	
+				}
 		};
 		suntimer.schedule(addsun, 0, 5000);
-		
+
 		//spawn virus every 5 sec
 		Timer virustimer = new Timer(); //Timer
 		TimerTask spawnvirus = new TimerTask(){
@@ -83,11 +79,11 @@ public class Core {
 				else { //chance of spawn strong virus is 0.3
 					virus.get(y).set(9, new Strong_virus(y,9));
 				}
-			}	
+			}
 		};
 		virustimer.schedule(spawnvirus, 0, 5000);
-		
-		//moniter state 
+
+		//moniter state
 		Timer detectiontimer = new Timer(); //Timer
 		TimerTask moniterstate = new TimerTask(){
 			@Override
@@ -95,14 +91,15 @@ public class Core {
 				checklose();//check if virus reach end
 				virus_attack();//virus attack speed is atk/1sec
 				System.gc();//free memory
-			}	
+			}
 		};
 		detectiontimer.schedule(moniterstate, 0, 1000);
 
-		//repaint the board every 1 sec 
+		//repaint the board every 1 sec
 		Timer repainttimer = new Timer(); //Timer
 		TimerTask repaint = new TimerTask(){
 			S_object s_object;
+
 			@Override
 			public void run() {
 
@@ -130,7 +127,6 @@ public class Core {
 			}
 		};
 		repainttimer.schedule(repaint, 0, 1000);
-	
 	}//end of main
 	
 	public static void checkboardP(ArrayList<ArrayList<Plants>> board) {
@@ -170,7 +166,10 @@ public class Core {
 		for(int i = 0;i < 3;i++) {
 			if(!virus.get(i).get(0).getname().equals("E")) {
 				System.out.println("you lose");
-				System.exit(0);
+
+				// gameover
+				end();
+				//System.exit(0);
 			}
 		}
 	}
@@ -188,8 +187,8 @@ public class Core {
 	    }
 	}
 
-	public static void begin() {
+	public static void end() {
 		ui.dispose();
-		ui = new UI();
+		ui = new UI(true);
 	}
 }
