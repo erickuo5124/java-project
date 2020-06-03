@@ -8,16 +8,13 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 
 ---
 
-## 遊戲機制
-各個物件有生命值和攻擊力
+## 遊戲規則
 
-生命值歸零就消失
-
-如果病毒走到城堡就遊戲結束
-
-殺病毒就加分
-
-沒有破關條件只最高
+「知識是光，善良是影，公民責任是教養和承擔。」
+面對新型冠狀病毒的來襲，成大也不得不做好準備
+收集從書本中得到的知識之光
+用口罩來抵禦病毒，並用酒精消滅它們
+防疫高手，就是你我
 
 ---
 
@@ -39,6 +36,7 @@ GitHub 連結：https://github.com/erickuo5124/fight_covid19
 成大可撥學生*3
 
 ### 防疫措施（植物）
+![](https://i.imgur.com/VmlrKix.gif)
 
 | Name | HP | ATK | Cost |speed| 說明 |
 | - | - | - | - | - | - |
@@ -149,3 +147,13 @@ ex:兩隻殭屍在同一格->其中一隻繼承另一隻的血量和攻擊力
 1. 鏟子
 
 ---
+
+## patch
+
+```java=
+public void dead() {
+	if(!super.getname().equals("E") && this.getHP() <= 0) {
+		Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
+	}
+}
+```
