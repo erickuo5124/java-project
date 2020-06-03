@@ -50,7 +50,11 @@ public class Virus extends D_object{
 	
 	public void moveforward() {
 		int y = getY();
-		int nextX = locationX-2;
+		int nextX = locationX-10;
+		if(nextX<0) {
+			locationX = nextX;
+			return;
+		}
 		if(Core.plant.get(y).get(nextX/100).getname().equals("E"))
 			locationX = nextX;
 		else

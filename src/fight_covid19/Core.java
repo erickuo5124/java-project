@@ -2,40 +2,35 @@ package fight_covid19;
 import java.util.*;
 public class Core {
 	
-	static ArrayList<ArrayList<Plants>> plant = new ArrayList<ArrayList<Plants>>(3);
-	static ArrayList<ArrayList<Virus>> virus = new ArrayList<ArrayList<Virus>>(3);
-	static ArrayList<ArrayList<Bullet>> bullet = new ArrayList<ArrayList<Bullet>>(3);
-	static int score = 0;
-	static int sun = 15000;
-	static UI ui;
+	static ArrayList<ArrayList<Plants>> plant;
+	static ArrayList<ArrayList<Virus>> virus;
+	static ArrayList<ArrayList<Bullet>> bullet;
+	static int score;
+	static int sun;
+	static UI ui = null;
+	static Timer suntimer, virustimer, detectiontimer, repainttimer;
+	static TimerTask addsun, spawnvirus, moniterstate, repaint;
 		
 	public static void main(String[] args) {
-		start();
+		gameMenu();
 	}
 	
-	public static void menu() {
+	public static void gameMenu() {
+		if(ui != null) ui.dispose();
 		ui = new UI();
 		ui.menuUI();
 	}
 	
 	public static void start() {
+		if(ui != null) ui.dispose();
 		ui = new UI();
 		ui.gameUI();
-		//initialize three board
-		for(int i = 0; i < 3; i++)  {
-	        plant.add(new ArrayList<Plants>(10));
-	        bullet.add(new ArrayList<Bullet>());
-	        virus.add(new ArrayList<Virus>());
-	    }
-		for(int i = 0; i < 3; i++)  {
-			for(int j = 0; j < 10; j++)  {
-		        plant.get(i).add(j, new EmptyP(i,j));
-		    }
-	    }
+		
+		reset();
 
 		//basic sun get 10 every 5 sec
-		Timer suntimer = new Timer(); //Timer
-		TimerTask addsun = new TimerTask(){
+		suntimer = new Timer(); //Timer
+		addsun = new TimerTask(){
 				@Override
 				public void run() {
 					sun = sun + 10;
@@ -44,8 +39,8 @@ public class Core {
 		suntimer.schedule(addsun, 0, 5000);
 
 		//spawn virus every 5 sec
-		Timer virustimer = new Timer(); //Timer
-		TimerTask spawnvirus = new TimerTask(){
+		virustimer = new Timer(); //Timer
+		spawnvirus = new TimerTask(){
 			@Override
 			public void run() {
 				Random rnd = new Random();
@@ -62,8 +57,8 @@ public class Core {
 		virustimer.schedule(spawnvirus, 0, 5000);
 
 		//moniter state
-		Timer detectiontimer = new Timer(); //Timer
-		TimerTask moniterstate = new TimerTask(){
+		detectiontimer = new Timer(); //Timer
+		moniterstate = new TimerTask(){
 			@Override
 			public void run() {
 				checklose();//check if virus reach end
@@ -73,9 +68,9 @@ public class Core {
 		detectiontimer.schedule(moniterstate, 0, 100);
 
 		//repaint the board every 1 sec
-		Timer repainttimer = new Timer(); //Timer
+		repainttimer = new Timer(); //Timer
 		S_object s_object = new S_object();
-		TimerTask repaint = new TimerTask(){
+		repaint = new TimerTask(){
 			@Override
 			public void run() {
 				s_object.setLocation(0, 0);
@@ -86,13 +81,57 @@ public class Core {
 		repainttimer.schedule(repaint, 0, 100);
 	}
 	
+	public static void gameover() {
+		reset();
+		if(ui != null) ui.dispose();
+		ui = new UI();
+		ui.endUI();
+	}
+	
+	public static void reset() {
+		
+		sun = 1500;
+		score = 0;
+		
+		plant =  new ArrayList<ArrayList<Plants>>(3);
+		virus = new ArrayList<ArrayList<Virus>>(3);
+		bullet = new ArrayList<ArrayList<Bullet>>(3);
+		
+		//initialize three board
+		for(int i = 0; i < 3; i++)  {
+	        plant.add(new ArrayList<Plants>(10));
+	        bullet.add(new ArrayList<Bullet>());
+	        virus.add(new ArrayList<Virus>());
+	    }
+		for(int i = 0; i < 3; i++)  {
+			for(int j = 0; j < 10; j++)  {
+		        plant.get(i).add(j, new EmptyP(i,j));
+		    }
+	    }
+		
+		if(suntimer != null)suntimer.cancel();
+		if(virustimer != null)virustimer.cancel();
+		if(detectiontimer != null)detectiontimer.cancel(); 
+		if(repainttimer != null)repainttimer.cancel();
+		
+		if(addsun != null) addsun.cancel();
+		if(spawnvirus != null) spawnvirus.cancel();
+		if(moniterstate != null) moniterstate.cancel();
+		if(repaint != null) repaint.cancel();
+
+		System.gc();
+		}
+	
 	public static void checklose() {
-		for(ArrayList<Virus> row : Core.virus) {
-        	for(Virus v : row) {
-        		if(v.locationX == 0) {
+		for(ArrayList<Virus> row : virus) {
+			Iterator<Virus> it = row.iterator();
+	        while (it.hasNext()) {
+	        	Virus v = it.next();
+	        	if(v.locationX < 0) {
         			System.out.println("you lose");
+        			gameover();
         		}
-        	}
+	        }
 		}
 	}
 }

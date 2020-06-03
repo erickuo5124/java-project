@@ -20,7 +20,7 @@ public class Background extends JPanel implements MouseListener{
         Image[] bgImage = new Image[3];
         bgImage[0] = createImageIcon("images/ui/startBG.jpg","main").getImage();
         bgImage[1] = createImageIcon("images/ui/mainBG.png", "main").getImage();
-        //bgImage[2] = createImageIcon("images/ui/endBG.png", "main").getImage();
+        bgImage[2] = createImageIcon("images/ui/endBG.jpg", "main").getImage();
         bg = bgImage[num];
         addMouseListener(this);
     }
@@ -33,7 +33,7 @@ public class Background extends JPanel implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-    	System.out.println(e.getX() +" " + e.getY());
+    	//System.out.println(e.getX() + " " + e.getY());
         int y = (e.getX() - 60) / 100;
         int x = (e.getY() - 250) / 110;
 

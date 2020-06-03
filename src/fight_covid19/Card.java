@@ -1,6 +1,8 @@
 package fight_covid19;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -60,12 +62,12 @@ public class Card extends JPanel implements MouseListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        setSize(60, 80);
+    	setBorder(new LineBorder(Color.ORANGE, 2, true));
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        setSize(64, 90);
+    	setBorder(new JPanel().getBorder());
     }
 
 

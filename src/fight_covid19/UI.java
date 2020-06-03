@@ -22,9 +22,10 @@ public class UI extends JFrame {
         bg.setLocation(0, 0);
         getLayeredPane().add(bg, -1);
         
-        Btn btn = new Btn("enter");
-		btn.setLocation(724, 385);
-        getLayeredPane().add(btn, 0);
+        Menu menu = new Menu();
+        menu.startMenu();
+        menu.setLocation(710,225);
+        getLayeredPane().add(menu, 0);
     }
     
     public void gameUI() {
@@ -54,6 +55,17 @@ public class UI extends JFrame {
         peashooter.setID("alcohol");
         getLayeredPane().add(peashooter, 0);
     }
+    
+    public void endUI() {
+    	bg = new Background(2);
+    	bg.setLocation(0, 0);
+        getLayeredPane().add(bg, -1);
+        
+        Menu menu = new Menu();
+        menu.endMenu();
+        menu.setLocation(470, 528);
+        getLayeredPane().add(menu, 0);
+    }
 
     //------------helper------------
     /** Returns an ImageIcon, or null if the path was invalid. */
@@ -67,18 +79,4 @@ public class UI extends JFrame {
             return null;
         }
     }
-}
-
-class Btn extends JPanel{
-	public JButton btn;
-	public Btn(String s) {
-		btn = new JButton(s);
-		btn.setBackground(Color.RED);
-		btn.addActionListener(new ActionListener(){ 
-			public void actionPerformed(ActionEvent e) 
-			{ 
-				JOptionPane.showMessageDialog(null,"11111111"); //呼叫msgbox
-			} 
-		}); 
-	}
 }
