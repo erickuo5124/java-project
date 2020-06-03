@@ -82,6 +82,22 @@ public class Core {
 	}
 	
 	public static void gameover() {
+		for(int i = 0; i < 3; i++)  {
+			for(int j = 0; j < 10; j++)  {
+		        plant.get(i).get(j).dead();
+		    }
+	    }
+		for(ArrayList<Virus> row : virus) {
+			while(!row.isEmpty()) {
+				Virus v = row.get(0);
+				v.dead();
+			}
+		}
+//		for(ArrayList<Virus> row : Core.virus) {
+//        	for(int j=0; j<row.size(); ++j) {
+//        		row.get(j).dead(j);
+//        	}
+//		}
 		reset();
 		if(ui != null) ui.dispose();
 		ui = new UI();
@@ -90,7 +106,7 @@ public class Core {
 	
 	public static void reset() {
 		
-		sun = 1500;
+		sun = 150;
 		score = 0;
 		
 		plant =  new ArrayList<ArrayList<Plants>>(3);
@@ -130,6 +146,7 @@ public class Core {
 	        	if(v.locationX < 0) {
         			System.out.println("you lose");
         			gameover();
+        			break;
         		}
 	        }
 		}

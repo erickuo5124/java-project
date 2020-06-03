@@ -30,9 +30,8 @@ public class Alcohol extends Plants{
 	}
 	
 	public void dead() {
-		if(!super.getname().equals("E") && this.getHP() <= 0) {
-			Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
-			ATKtimer.cancel();
-		}
+		Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
+		ATKtimer.cancel();
+		System.gc();
 	}
 }

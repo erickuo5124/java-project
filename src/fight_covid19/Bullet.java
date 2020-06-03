@@ -27,12 +27,11 @@ public class Bullet extends D_object{
 		this.Move_speed = Move_speed;
 	}
 	
-	public void attack() {
-		int y = getY();
-		Virus v = Core.virus.get(y).get(0);
+	public void attack(Virus v) {
 		v.setHP(v.getHP() - this.getATK());
 		if(v.getHP() <= 0) {
 			v.dead();
+			v = null;
 		}
 	}
 }

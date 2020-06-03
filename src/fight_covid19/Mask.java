@@ -16,8 +16,6 @@ public class Mask extends Plants{
 	}
 
 	public void dead() {
-		if(!super.getname().equals("E") && this.getHP() <= 0) {
-			Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
-		}
+		Core.plant.get(this.getY()).set(this.getX(),new EmptyP(this.getY(),this.getX()));
 	}
 }

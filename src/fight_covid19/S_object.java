@@ -60,7 +60,6 @@ public class S_object extends JPanel {
                 }
             }
         }
-                
         // virus
         for(ArrayList<Virus> row : Core.virus) {
         	for(Virus v : row) {
@@ -79,14 +78,16 @@ public class S_object extends JPanel {
         		int y = b.getY();
         		int nextX = b.locationX+24;
         		if(!Core.virus.get(y).isEmpty()) {
-        			Virus v = Core.virus.get(y).get(0);
-        			if(v.locationX < nextX) {
-        				b.attack();
-        				it.remove();
+        			for(Virus v : Core.virus.get(b.getY())) {
+	        			if(v.locationX < nextX) {
+	        				b.attack(v);
+	        				it.remove();
+	        				break;
+	        			}
         			}
-        			else if(v.locationX > 1000) it.remove();
         		}
         		b.locationX = nextX;
+        		if(b.locationX > 1000) it.remove();
             }
         	
         }

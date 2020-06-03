@@ -31,9 +31,10 @@ public class Virus extends D_object{
 	}
 	
 	public void attack(int x) {
+		System.out.println(x);
 		Plants plant_in_the_front = Core.plant.get(this.getY()).get(x);
 		plant_in_the_front.setHP(plant_in_the_front.getHP() - this.getATK());
-		plant_in_the_front.dead();
+		if(plant_in_the_front.getHP() <= 0) plant_in_the_front.dead();
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -43,8 +44,9 @@ public class Virus extends D_object{
 	
 	public void dead() {
 		virusmovetimer.cancel();
+		virusmovetimer = null;
+		Core.virus.get(getY()).remove(Core.virus.get(getY()).indexOf(this));
 		Core.score = Core.score + 10;
-		Core.virus.get(getY()).remove(0);
 		System.gc();
 	}
 	
